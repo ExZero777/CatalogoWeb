@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-12-2020 a las 04:54:58
+-- Tiempo de generación: 04-12-2020 a las 21:48:41
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.6
 
@@ -29,10 +29,16 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `categorias` (
   `id_categoria` int(8) NOT NULL,
-  `nombre_categoria` varchar(50) NOT NULL,
-  `id_subcateroria` int(8) DEFAULT NULL,
-  `nombre_subcategoria` varchar(50) DEFAULT NULL
+  `nombre_categoria` varchar(50) DEFAULT NULL,
+  `activo_categoria` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `categorias`
+--
+
+INSERT INTO `categorias` (`id_categoria`, `nombre_categoria`, `activo_categoria`) VALUES
+(1, 'alfajores', 1);
 
 -- --------------------------------------------------------
 
@@ -47,6 +53,13 @@ CREATE TABLE `comentarios` (
   `activo_comentario` int(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `comentarios`
+--
+
+INSERT INTO `comentarios` (`id_comentario`, `fecha_comentario`, `comentario_comentario`, `activo_comentario`) VALUES
+(1, '2020-12-02', 'el mejor alfajor', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -58,6 +71,13 @@ CREATE TABLE `marcas` (
   `nombre_marca` varchar(50) DEFAULT NULL,
   `activo_marca` int(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `marcas`
+--
+
+INSERT INTO `marcas` (`id_marca`, `nombre_marca`, `activo_marca`) VALUES
+(1, 'arcor', 1);
 
 -- --------------------------------------------------------
 
@@ -98,6 +118,35 @@ CREATE TABLE `productos` (
   `destacado_producto` int(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `productos`
+--
+
+INSERT INTO `productos` (`id_producto`, `nombre_producto`, `descripcion_producto`, `marca_producto`, `modelo_producto`, `foto_producto`, `ranqueo_producto`, `usuario_producto`, `categoria_producto`, `comentario_producto`, `destacado_producto`) VALUES
+(5, 'jorgitou', 'alto alfajor', 1, 'chocolate', '../CatalogoWeb/img/integ.jpg', 5, 23, NULL, 1, 1),
+(6, 'mach3', 'hojojo', 1, 'chocolate', '../CatalogoWeb/img/gmb.jpg', 5, 23, NULL, 1, 1),
+(7, 'march1', 'jejej', 1, 'chocolate', '../CatalogoWeb/img/index.jpg', 5, 23, NULL, 1, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `subcategorias`
+--
+
+CREATE TABLE `subcategorias` (
+  `id_subcategoria` int(8) NOT NULL,
+  `nombre_subcategoria` varchar(50) DEFAULT NULL,
+  `categoria_subcategoria` int(8) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `subcategorias`
+--
+
+INSERT INTO `subcategorias` (`id_subcategoria`, `nombre_subcategoria`, `categoria_subcategoria`) VALUES
+(1, 'chocolate', 1),
+(2, 'azucar', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -134,8 +183,7 @@ INSERT INTO `usuarios` (`id_usuario`, `nickname_usuario`, `nombre_usuario`, `ape
 -- Indices de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  ADD PRIMARY KEY (`id_categoria`),
-  ADD KEY `IXFK_Categoria_Subcategoria` (`id_subcateroria`);
+  ADD PRIMARY KEY (`id_categoria`);
 
 --
 -- Indices de la tabla `comentarios`
@@ -166,6 +214,13 @@ ALTER TABLE `productos`
   ADD KEY `IXFK_Usuario_Producto` (`usuario_producto`);
 
 --
+-- Indices de la tabla `subcategorias`
+--
+ALTER TABLE `subcategorias`
+  ADD PRIMARY KEY (`id_subcategoria`),
+  ADD KEY `IXFK_Categoria_Subcategoria` (`categoria_subcategoria`);
+
+--
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
@@ -177,22 +232,16 @@ ALTER TABLE `usuarios`
 --
 
 --
--- AUTO_INCREMENT de la tabla `categorias`
---
-ALTER TABLE `categorias`
-  MODIFY `id_categoria` int(8) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT de la tabla `comentarios`
 --
 ALTER TABLE `comentarios`
-  MODIFY `id_comentario` int(8) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_comentario` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `marcas`
 --
 ALTER TABLE `marcas`
-  MODIFY `id_marca` int(8) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_marca` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `permisos`
@@ -204,7 +253,13 @@ ALTER TABLE `permisos`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_producto` int(8) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_producto` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT de la tabla `subcategorias`
+--
+ALTER TABLE `subcategorias`
+  MODIFY `id_subcategoria` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
@@ -217,12 +272,6 @@ ALTER TABLE `usuarios`
 --
 
 --
--- Filtros para la tabla `categorias`
---
-ALTER TABLE `categorias`
-  ADD CONSTRAINT `categorias_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id_subcateroria`);
-
---
 -- Filtros para la tabla `productos`
 --
 ALTER TABLE `productos`
@@ -230,6 +279,12 @@ ALTER TABLE `productos`
   ADD CONSTRAINT `productos_ibfk_2` FOREIGN KEY (`marca_producto`) REFERENCES `marcas` (`id_marca`),
   ADD CONSTRAINT `productos_ibfk_3` FOREIGN KEY (`comentario_producto`) REFERENCES `comentarios` (`id_comentario`),
   ADD CONSTRAINT `productos_ibfk_4` FOREIGN KEY (`usuario_producto`) REFERENCES `usuarios` (`id_usuario`);
+
+--
+-- Filtros para la tabla `subcategorias`
+--
+ALTER TABLE `subcategorias`
+  ADD CONSTRAINT `subcategorias_ibfk_1` FOREIGN KEY (`categoria_subcategoria`) REFERENCES `categorias` (`id_categoria`);
 
 --
 -- Filtros para la tabla `usuarios`
