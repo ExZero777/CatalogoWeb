@@ -47,39 +47,49 @@
 
 <?php 
    require "./conexion.php";
-
+   $c=0;
    $sql = "SELECT * from productos order by id_producto";
 	 $query = $mysqli->query($sql);
 	 while($resultado = $query->fetch_assoc()) {
-         $productos[] = $resultado;
+         if($resultado['destacado_producto']==1){
+          $productos[] = $resultado;
+          $c=$c+1;
+         }
    }
+
+  $vals = range($c,0);
+  shuffle($vals);
+  foreach ($vals as $val) {
+  }
+   
+ 
    
 ?>
       <div class="container-fluid text-white">
       <h3 class="mt-4">DESTACADOS!!!</h3>
         <div class="text-left"><h2>
-	       	<img border="0" src=<?php echo "'".$productos[0]['foto_producto']."'" ?> width="75" height="75" title="Producto Destacado 1" />
-          <label for="Producto Destacado 1"><h6><?php echo "'".$productos[0]['nombre_producto']."'" ?></h6></label>
+	       	<img border="0" src=<?php echo "'".$productos[$val]['foto_producto']."'" ?> width="75" height="75" title="Producto Destacado 1" />
+          <label for="Producto Destacado 1"><h6><?php echo "'".$productos[$val]['nombre_producto']."'" ?></h6></label>
         </h2></div>
         <div class="text-center"><h2>
-	       	<img border="0" src="../img/atras.png" width="42" height="42" title="Producto Destacado 2" />
-          <label for="Producto Destacado 2"><h6>Atrás</h6></label>
+          <img border="0" src=<?php echo "'".$productos[$val+5]['foto_producto']."'" ?> width="75" height="75" title="Producto Destacado 2" />
+          <label for="Producto Destacado 2"><h6><?php echo "'".$productos[$val+5]['nombre_producto']."'" ?></h6></label>
         </h2></div>
         <div class="text-right"><h2>
-	       	<img border="0" src="../img/atras.png" width="42" height="42" title="Producto Destacado 3" />
-          <label for="Producto Destacado 3"><h6>Atrás</h6></label>
+          <img border="0" src=<?php echo "'".$productos[$val-3]['foto_producto']."'" ?> width="75" height="75" title="Producto Destacado 3" />
+          <label for="Producto Destacado 3"><h6><?php echo "'".$productos[$val-3]['nombre_producto']."'" ?></h6></label>
         </h2></div>
         <div class="text-right"><h2>
-	       	<img border="0" src="../img/atras.png" width="42" height="42" title="Producto Destacado 4" />
-          <label for="Producto Destacado 4"><h6>Atrás</h6></label>
+          <img border="0" src=<?php echo "'".$productos[$val+2]['foto_producto']."'" ?> width="75" height="75" title="Producto Destacado 4" />
+          <label for="Producto Destacado 4"><h6><?php echo "'".$productos[$val+2]['nombre_producto']."'" ?></h6></label>
         </h2></div>
         <div class="text-center"><h2>
-	       	<img border="0" src="../img/atras.png" width="42" height="42" title="Producto Destacado 5" />
-          <label for="Producto Destacado 5"><h6>Atrás</h6></label>
+          <img border="0" src=<?php echo "'".$productos[$val-1]['foto_producto']."'" ?> width="75" height="75" title="Producto Destacado 5" />
+          <label for="Producto Destacado 5"><h6><?php echo "'".$productos[$val-1]['nombre_producto']."'" ?></h6></label>
         </h2></div>
         <div class="text-left"><h2>
-	       	<img border="0" src="../img/atras.png" width="42" height="42" title="Producto Destacado 6" />
-          <label for="Producto Destacado 6"><h6>Atrás</h6></label>
+          <img border="0" src=<?php echo "'".$productos[$val+7]['foto_producto']."'" ?> width="75" height="75" title="Producto Destacado 6" />
+          <label for="Producto Destacado 6"><h6><?php echo "'".$productos[$val+7]['nombre_producto']."'" ?></h6></label>
         </h2></div>
         <p>Configuración de datos para control e incorporación de información en la app móvil.</p>
       </div>

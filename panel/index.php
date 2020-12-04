@@ -19,7 +19,7 @@
 
 </head>
 
-<body background="../img/background.jpg" style="background-size:cover";>
+<body background="../img/panel.jpg" style="background-size:100% 100%";>
 
 
 
@@ -27,9 +27,9 @@
 
     <!-- Sidebar -->
     <div class="bg-black border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading bg-black text-white">Menú de Opciones</div>
+      <div class="sidebar-heading bg-black text-dark">Menú de Opciones</div>
       <div class="list-group list-group-flush">
-        <a href="../listado/" class="list-group-item list-group-item-action bg-dark text-white">Listado De Productos</a>
+        <a href="../listados/" class="list-group-item list-group-item-action bg-dark text-white">Listado De Productos</a>
         <a href="../comentarios/" class="list-group-item list-group-item-action bg-dark text-white">Comentarios</a>
         <a href="../productos/" class="list-group-item list-group-item-action bg-dark text-white">Productos</a>
         <a href="../usuarios/" class="list-group-item list-group-item-action bg-dark text-white">Usuarios</a>
@@ -53,11 +53,11 @@
       </nav>
 
       
-      <div class="col-sm-2 text-white">
-        <h2 class="mt-4">TheClinicAdm</h2>
+      <div class="col-sm-2 text-dark">
+        <h2 class="mt-4">CatalogoWeb</h2>
 	    </div>
 
-      <div class="container-fluid text-white">
+      <div class="container-fluid text-dark">
         <h1 class="mt-4"><img class="d-block mx-auto mb-4" src="../img/jdlsa.jpg" alt="" width="75" height="75"></h1>
         <h5 class="mt-4">Panel de Control</h5>
         <p>Configuración de datos para control e incorporación de información en la app móvil.</p>

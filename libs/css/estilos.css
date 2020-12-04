@@ -1,0 +1,219 @@
+html, body
+{
+	margin: 0;
+	padding: 0;
+    font-family: "Roboto", sans-serif;
+    /*background: #14243D;*/
+    width:100%;
+    background: url(img/background.jpg) 50% 0 no-repeat fixed;
+    background-size:cover;
+}
+
+.articulos
+{
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 100%;
+    justify-content: space-evenly;
+    
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    /* Safari and Chrome */
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    /* W3C */
+    display: box;
+    box-pack: center;
+    box-align: center;
+}
+
+
+.articulo
+{
+    width: 40%;
+    padding: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-weight: bold;
+	box-sizing: border-box;
+	background:#104892;
+	border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-width: 1px 1px 1px 1px;
+    border-radius: 5px;
+    margin: 20px;
+    box-shadow: 0px 0px 100px 15px rgb(0, 0, 0);
+}
+
+.articulo h1
+{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 25px;
+}
+
+.articulo label
+{
+    color: rgb(219, 227, 255);
+    text-align: left;
+    font-size: 15px;
+}
+
+.header
+{
+    box-sizing: border-box;
+	background: white;
+	border-style: solid;
+    border-bottom-color: black;
+    border-width: 0px 0px 1px 0px;
+    padding: 0;
+}
+
+
+.botonEnviar
+{ 
+    background-image:url(img/botonok.jpg);
+    background-repeat:no-repeat;
+    height:60px;
+    width:257px;
+    background-position:center;
+    border-radius:50px;
+    border:1px solid #2b6891;
+}
+
+.botonEnviar:hover 
+{
+    background-image:url(img/botonok.jpg);
+    background-repeat:no-repeat;
+    height:60px;
+    width:257px;
+    border-radius:50px;
+    border:1px solid #2b6891;
+    background-position:center;
+}
+
+.botonEnviar:active 
+{
+	position:relative;
+    top:1px;
+}
+
+
+.campo {
+    padding: 5px;
+    font-size: 14px;
+    border-width: 1px;
+    border-color: #000000;
+    background-color: rgb(19, 23, 80);
+    color: #828282;
+    border-style: solid;
+    border-radius: 7px;
+    margin-bottom: 20px;
+}
+.campo:focus {
+    outline:none;
+}
+
+#Sub_Fendt
+{
+	
+	display: inline-block;
+	width:90%;	
+	font-family: Verdana;
+	color:orange;
+    text-align:center;
+    
+}
+
+#footer
+{
+	display: inline-block ;
+	width:90%;	
+	font-family: Verdana;
+    color:orange;
+    
+}
+
+
+/*TABLET*/
+@media(min-width: 790px) and (max-width: 1030px)
+{
+
+    .articulo    {
+        width: 50%;
+    }
+
+    .articulo h1    {
+        font-size: 25px;
+    }
+
+    .articulo label    {
+        font-size: 18px;
+    }
+}
+
+/*TELEFONO 2*/
+@media(min-width: 550px) and (max-width: 790px)
+{
+
+    .articulos    {
+        display: block;
+        display: -moz-box;
+        -moz-box-pack: center;
+        -moz-box-align: center;
+        /* Safari and Chrome */
+        display: -webkit-box;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        /* W3C */
+        display: box;
+        box-pack: center;
+        box-align: center;
+    }
+    
+    .articulo    {
+        width: 65%;
+    }
+
+    .articulo h1    {
+        font-size: 30px;
+    }
+
+    .articulo label    {
+        font-size: 18px;
+    }
+}
+
+/*TELEFONO*/
+@media(max-width: 550px) 
+{
+
+    .articulos    {
+        display: block;
+        display: -moz-box;
+        -moz-box-pack: center;
+        -moz-box-align: center;
+        /* Safari and Chrome */
+        display: -webkit-box;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        /* W3C */
+        display: box;
+        box-pack: center;
+        box-align: center;
+    }
+    
+    .articulo    {
+        width: 80%;
+    }
+
+    .articulo h1    {
+        font-size: 30px;
+    }
+
+    .articulo label    {
+        font-size: 18px;
+    }
+}
