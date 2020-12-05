@@ -20,7 +20,7 @@
 
 </head>
 
-<body background="./img/index.jpg" style="background-size:100% 100%";>
+<body background="./img/catalogo.jpg" style="background-size:100% 100%";>
 
   <div class="d-flex" id="wrapper">
 
@@ -61,9 +61,6 @@
   shuffle($vals);
   foreach ($vals as $val) {
   }
-   
- 
-   
 ?>
       <div class="container-fluid text-white">
       <h3 class="mt-4">DESTACADOS!!!</h3>
