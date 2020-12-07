@@ -38,31 +38,31 @@
       
      
     <div class="col-md-12 order-md-1" ALIGN=center>
-    <h2 class="mt-4 text-dark" >Alta De Categorias</h2>
+    <h2 class="mt-4 text-dark" >Alta De SubCategorias</h2>
 
 
 
 <div class="container">
     <div class="d-flex justify-content-center text-dark">
-      <form ALIGN=center class="form-horizontal" action="../categorias/grabar.php" method="POST">
+      <form ALIGN=center class="form-horizontal" action="../subcategorias/grabar.php" method="POST">
         <div class="form-group">
 
           <div class="col-md-12 mb-4">
             <label for="nombre_categoria">Nombre</label>
-            <input type="text" class="form-control" name="nombre_categoria" placeholder="" value="" required>
+            <input type="text" class="form-control" name="nombre_subcategoria" placeholder="" value="" required>
             <div class="invalid-feedback">
-              Faltó Ingresar El Nombre De La Categoria
+              Faltó Ingresar El Nombre De La SubCategoria
             </div>
           </div>
         
           <div class="col-md-12 mb-4">
             <label for="activo_categoria">Activa(Si/1 O No/0)</label>
-            <select type="text" class="custom-select d-block w-100" name="activo_categoria" placeholder="" value="" required>
+            <select type="text" class="custom-select d-block w-100" name="activo_subcategoria" placeholder="" value="" required>
               <option value=0>Inactivo</option>
               <option value=1>Activo</option>
             </select>
             <div class="invalid-feedback">
-              Faltó Ingresar Si La Categoria Es Activa O No
+              Faltó Ingresar Si La SubCategoria Es Activa O No
             </div>
           </div>
           

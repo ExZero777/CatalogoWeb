@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-<title>Listados Por SubCategorias</title>
+<title>Listados Por Categorias</title>
   <?php
     require "../mlibs/header.php"
   ?>
@@ -10,15 +10,15 @@
   <?php 
       require "../conexion.php";
 
-      $sql = "SELECT s.id_subcategoria, s.nombre_subcategoria FROM subcategorias AS s,categorias AS c WHERE c.id_categoria=s.categoria_subcategoria ORDER BY s.id_subcategoria";
+      $sql = "SELECT * from categorias order by id_categoria";
 	    $query = $mysqli->query($sql);
 	    while($resultado = $query->fetch_assoc()) {
-        $subcategorias[] = $resultado;
+        $categorias[] = $resultado;
       }
   ?>    
 
   <?php
-    require "../mlibs/bodylscat.php";
+    require "../mlibs/bodypcat.php";
   ?>
 
   <?php

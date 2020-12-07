@@ -18,7 +18,7 @@
   ?>    
 
   <?php
-    require "../mlibs/bodylscat.php";
+    require "../mlibs/bodyscat.php";
   ?>
 
   <?php

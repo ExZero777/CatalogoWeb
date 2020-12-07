@@ -5,7 +5,9 @@
     require "../mlibs/header.php"
   ?>
 
-  <body background="../img/usuarios.jpg" style="background-size:cover";>
+  <body background="../img/indexu.jpg" style="background-size:cover";>
+
+ 
 
 <?php 
    require "../conexion.php";
@@ -19,7 +21,7 @@
 ?>    
        
   <?php
-    require "../mlibs/bodyu.php";
+    require "../mlibs/bodyiu.php";
   ?>
 
   <?php

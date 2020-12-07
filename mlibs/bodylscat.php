@@ -1,5 +1,4 @@
 <div class="d-flex" id="wrapper">
-  
   <div class="bg-black border-right" id="sidebar-wrapper">
     <div class="sidebar-heading bg-black text-dark">Menú de Opciones</div>
       <div class="list-group list-group-flush">
@@ -17,9 +16,9 @@
                 <li>
                   <a href="#" class="list-group-item list-group-item-action bg-warning text-dark">A-Z...Z-A</a>
                 </li>
-            </ul>         
+            </ul> 
         <a href="../comentarios/" class="list-group-item list-group-item-action bg-dark text-white">Comentarios</a>
-        <a href="../productos/" class="list-group-item list-group-item-action bg-dark text-white">Productos</a>
+        <a href="../productos/" class="list-group-item list-group-item-action bg-dark text-white">Productos</a> 
         <a href="../usuarios/" class="list-group-item list-group-item-action bg-dark text-white">Usuarios</a>
         <a href="../contacto/" class="list-group-item list-group-item-action bg-dark text-white">Contactenos</a>
         
@@ -41,27 +40,18 @@
     <div class="mt-4 align-self-center text-left">
   
       <div class="mt-4 text-dark">
-        <h2 class="mt-4">Listado De Productos</h2>
+        <h2 class="mt-4">Listado Por SubCategorias</h2>
       </div>  
 
       <?php 				
-      	$long = count($productos);
+      	$long = count($subcategorias);
       	for($i=0; $i< $long; $i++){
       ?>
 	    <div class="list-group">
-        <a 	<?php echo "href=modifica.php?id_producto=".$productos[$i]['id_producto'];?>
+        <a 	<?php echo "href=../listados/subcategorias.php?id_subcategoria=".$subcategorias[$i]['id_subcategoria'];?>
 			   	class="list-group-item bg-dark">
-			  	<h4 class="list-group-item-heading"> <?php echo $productos[$i]['id_producto'] ."";?> </h4>
-          <p class="list-group-item-text"><?php 	echo "Nombre: " . $productos[$i]['nombre_producto'] ." - Descripcion: "; 
-                            echo $productos[$i]['descripcion_producto'] ." - Marca: "; 
-                            echo $productos[$i]['marca_producto'] ." - Modelo: "; 
-                            echo $productos[$i]['modelo_producto'] ." - Foto: ";
-                            echo $productos[$i]['foto_producto'] ." - Ranqueo: ";
-                            echo $productos[$i]['ranqueo_producto'] ." - Usuario: ";
-                            echo $productos[$i]['usuario_producto'] ." - Categoria: ";  
-                            echo $productos[$i]['categoria_producto'] ." - Destacado: ";  
-                            echo $productos[$i]['destacado_producto'] ."";
-                            ?>
+			  	<h4 class="list-group-item-heading"> <?php echo $subcategorias[$i]['id_subcategoria'] ."";?> </h4>
+          <p class="list-group-item-text"><?php 	echo "Nombre: " . $subcategorias[$i]['nombre_subcategoria'] .""; ?>
           </p>		 
 			  </a>
       </div>

@@ -20,16 +20,18 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
       </button>
-
-      
     </nav>
         
-    <div class="mt-4 align-self-center text-left">
+    
   
-          <section class="articulos"> 
-            <article class="articulo">
-                <h1>Contactanos!</h1>
+      <section class="articulos"> 
+        <article class="articulo">
+          <div class="col-md-12 order-md-1" ALIGN=center>
+            <h1>Contactanos!</h1>
             
+        <div class="container">
+          <div class="d-flex justify-content-center text-white"> 
+
             <form action="../mlibs/mail.php" method="GET" name="miform" ALIGN=center>
                 <label for="nombre">Nombre</label>
                 <input placeholder="Nombre" class="campo" name="nombreUsuario" id="nombre" type="text" style="width: 100%">
@@ -58,7 +60,7 @@
             </form>
             </article>
           </section>
-	   
+          </div> 
     </div> 
     <?php
       include "footer.php"

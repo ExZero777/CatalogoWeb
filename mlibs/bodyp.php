@@ -1,25 +1,25 @@
 <div class="d-flex" id="wrapper">
   
-  <div class="bg-black border-right" id="sidebar-wrapper">
+  <div class="bg-black border-right border-dark " id="sidebar-wrapper">
     <div class="sidebar-heading bg-black text-dark">Menú de Opciones</div>
       <div class="list-group list-group-flush">
-        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action dropdown-toggle bg-dark text-white">Listado De Productos</a>
+      <a href="../listados/" class="list-group-item list-group-item-action bg-dark text-white">Listado De Productos</a>     
+        <a href="../comentarios/" class="list-group-item list-group-item-action bg-dark text-white">Comentarios</a>
+        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action dropdown-toggle bg-dark text-white">Productos</a>
             <ul class="collapse list-unstyled" id="pageSubmenu">
                 <li>
-                  <a href="../listados/categorias.php" class="list-group-item list-group-item-action bg-warning text-dark">Categorias</a>
+                  <a href="../productos/producto.php" class="list-group-item list-group-item-action bg-warning text-dark">Nuevo</a>
                 </li>
                 <li>
-                  <a href="../listados/subcategorias.php" class="list-group-item list-group-item-action bg-warning text-dark">SubCategorias</a>
+                  <a href="../productos/categorias.php" class="list-group-item list-group-item-action bg-warning text-dark">Categorias</a>
                 </li>
                 <li>
-                  <a href="../listados/marcas.php" class="list-group-item list-group-item-action bg-warning text-dark">Marcas</a>
+                  <a href="../productos/subcategorias.php" class="list-group-item list-group-item-action bg-warning text-dark">SubCategorias</a>
                 </li>
                 <li>
-                  <a href="#" class="list-group-item list-group-item-action bg-warning text-dark">A-Z...Z-A</a>
+                  <a href="../marcas/index.php" class="list-group-item list-group-item-action bg-warning text-dark">Marcas</a>
                 </li>
-            </ul>         
-        <a href="../comentarios/" class="list-group-item list-group-item-action bg-dark text-white">Comentarios</a>
-        <a href="../productos/" class="list-group-item list-group-item-action bg-dark text-white">Productos</a>
+            </ul>   
         <a href="../usuarios/" class="list-group-item list-group-item-action bg-dark text-white">Usuarios</a>
         <a href="../contacto/" class="list-group-item list-group-item-action bg-dark text-white">Contactenos</a>
         
@@ -29,10 +29,10 @@
     </div>
     
   <div id="page-content-wrapper align-self-center" >
-    <nav class="navbar navbar-expand-lg navbar-light bg-black border-bottom">
+    <nav class="navbar navbar-expand-lg navbar-light bg-black border-bottom border-dark">
       <button class="btn btn-primary" id="menu-toggle">Ver / Ocultar</button>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon text"></span>
       </button>
 
       
@@ -41,7 +41,7 @@
     <div class="mt-4 align-self-center text-left">
   
       <div class="mt-4 text-dark">
-        <h2 class="mt-4">Listado De Productos</h2>
+        <h2 class="mt-4">Productos</h2>
       </div>  
 
       <?php 				
@@ -59,7 +59,8 @@
                             echo $productos[$i]['foto_producto'] ." - Ranqueo: ";
                             echo $productos[$i]['ranqueo_producto'] ." - Usuario: ";
                             echo $productos[$i]['usuario_producto'] ." - Categoria: ";  
-                            echo $productos[$i]['categoria_producto'] ." - Destacado: ";  
+                            echo $productos[$i]['categoria_producto'] ." - SubCategoria: ";  
+                            echo $productos[$i]['subcategoria_producto'] ." - Destacado: ";    
                             echo $productos[$i]['destacado_producto'] ."";
                             ?>
           </p>		 

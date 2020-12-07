@@ -1,25 +1,27 @@
 <div class="d-flex" id="wrapper">
+  
   <div class="bg-black border-right" id="sidebar-wrapper">
     <div class="sidebar-heading bg-black text-dark">Menú de Opciones</div>
       <div class="list-group list-group-flush">
-        <a href="../listados/" class="list-group-item list-group-item-action bg-dark text-white">Listado De Productos</a>        
+        <a href="../listados/" class="list-group-item list-group-item-action bg-dark text-white">Listado De Productos</a>
         <a href="../comentarios/" class="list-group-item list-group-item-action bg-dark text-white">Comentarios</a>
-        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action dropdown-toggle bg-dark text-white">Productos</a>
+        <a href="../productos/" class="list-group-item list-group-item-action bg-dark text-white">Productos</a>
+        
+        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action dropdown-toggle bg-dark text-white">Usuarios</a>
             <ul class="collapse list-unstyled" id="pageSubmenu">
                 <li>
-                  <a href="../subcategorias/subcategorias.php" class="list-group-item list-group-item-action bg-warning text-dark">Nuevo</a>
+                  <a href="../usuarios/usuarios.php" class="list-group-item list-group-item-action bg-warning text-dark">Nuevo</a>
                 </li>
                 <li>
-                  <a href="../categorias/index.php" class="list-group-item list-group-item-action bg-warning text-dark">Categorias</a>
+                  <a href="../perfiles/index.php" class="list-group-item list-group-item-action bg-warning text-dark">Perfiles</a>
                 </li>
                 <li>
-                  <a href="../marcas/index.php" class="list-group-item list-group-item-action bg-warning text-dark">Marcas</a>
+                <a href="../usuarios/index.php" class="list-group-item list-group-item-action bg-warning text-dark">Listado De Usuarios</a>
                 </li>
                 <li>
                   <a href="#" class="list-group-item list-group-item-action bg-warning text-dark">A-Z...Z-A</a>
                 </li>
-            </ul> 
-        <a href="../usuarios/" class="list-group-item list-group-item-action bg-dark text-white">Usuarios</a>
+            </ul>         
         <a href="../contacto/" class="list-group-item list-group-item-action bg-dark text-white">Contactenos</a>
         
   
@@ -37,26 +39,34 @@
       
     </nav>
         
-    <div class="mt-4 align-self-center text-left">
-  
-      <div class="mt-4 text-dark">
-        <h2 class="mt-4">Listado Por SubCategorias</h2>
-      </div>  
+    <div class="col-md-12 order-md-1" ALIGN=center>
+    <h2 class="mt-4 text-dark" >Listado De Perfiles</h2>
 
+
+
+<div class="container">
+    <div class="d-flex justify-content-center text-white" >
+      <form ALIGN=center class="form-horizontal">
+        <div class="form-group" >
+
+      
       <?php 				
-      	$long = count($subcategorias);
+      	$long = count($permisos);
       	for($i=0; $i< $long; $i++){
       ?>
+
 	    <div class="list-group">
-        <a 	<?php echo "href=../listados/subcategorias.php?id_subcategoria=".$subcategorias[$i]['id_subcategoria'];?>
-			   	class="list-group-item bg-dark">
-			  	<h4 class="list-group-item-heading"> <?php echo $subcategorias[$i]['id_subcategoria'] ."";?> </h4>
-          <p class="list-group-item-text"><?php 	echo "Nombre: " . $subcategorias[$i]['nombre_subcategoria'] .""; ?>
-          </p>		 
+      <a 	<?php echo "href=modifica.php?id_permiso=".$permisos[$i]['id_permiso'];?>
+						 class="list-group-item bg-dark col-md-12 mb-4">
+				<h4 class="list-group-item-heading"> <?php echo $permisos[$i]['id_permiso'] ."";?> </h4>
+        <p class="list-group-item-text"><?php 	echo "Perfil: " . $permisos[$i]['nombre_permiso'] .""; 
+        ?>
+        </p>		 
 			  </a>
-      </div>
-	    <?php  } ?>
+      <?php  } ?>
     </div> 
+    </form>
+    </div>
     <?php
       include "footer.php"
     ?>

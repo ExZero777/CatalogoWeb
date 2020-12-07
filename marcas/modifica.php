@@ -12,23 +12,16 @@
 <?php 
    
    require "../conexion.php";
-   $sql = "SELECT * from usuarios where id_usuario = " . $_GET['id_usuario'];
+   $sql = "SELECT * from marcas where id_marca = " . $_GET['id_marca'];
    $query = $mysqli->query($sql);
    while($resultado = $query->fetch_assoc()) {
-         $usuarios[] = $resultado;
+         $marcas[] = $resultado;
      }  
      
-     
-     $sql = "SELECT * from permisos order by id_permiso";
-	$query = $mysqli->query($sql);
-	while($resultado = $query->fetch_assoc()) {
-        $permisos[] = $resultado;
-    }  
-	
-	echo "<input type='hidden' name='id_usuario' value=" .$_GET['id_usuario'] .">"; 
+	echo "<input type='hidden' name='id_marca' value=" .$_GET['id_marca'] .">"; 
 ?>  
 	  <?php
-    require "../mlibs/bodyum.php";
+    require "../mlibs/bodymm.php";
   ?>
 
   <?php
