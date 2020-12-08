@@ -1,5 +1,5 @@
 <html>
-<title>Grabar Usuarios</title>
+<title>Listados De Productos</title>
 <?php 
     require "../metodos.php";
 ?>

@@ -1,26 +1,26 @@
 <!doctype html>
 <html>
-<title>Listados De Marcas</title>
+<title>Listados De Subcategorias</title>
   <?php
     require "../mlibs/header.php"
   ?>
 
 
-<body background="../img/marcas.jpg" style="background-size:cover";>
+<body background="../img/listados.jpg" style="background-size:cover";>
 
 
 <?php 
     require "../conexion.php";
 
-    $sql = "SELECT * from marcas order by id_marca";
+    $sql = "SELECT * from subcategorias order by id_subcategoria";
     $query = $mysqli->query($sql);
     while($resultado = $query->fetch_assoc()) {
-      $marcas[] = $resultado;
+      $subcategorias[] = $resultado;
     }
 ?>    
 
 <?php
-  require "../mlibs/bodyim.php";
+  require "../mlibs/bodyiscat.php";
 ?>
 
 <?php

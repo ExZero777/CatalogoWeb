@@ -24,6 +24,12 @@
   while($resultado = $query->fetch_assoc()) {
           $categorias[] = $resultado;
       }   
+
+  $sql = "SELECT * from subcategorias order by id_subcategoria";
+  $query = $mysqli->query($sql);
+  while($resultado = $query->fetch_assoc()) {
+          $subcategorias[] = $resultado;
+      }      
      
    $sql = "SELECT * from marcas order by id_marca";
 	 $query = $mysqli->query($sql);

@@ -10,7 +10,7 @@
   <?php 
       require "../conexion.php";
 
-      $sql = "SELECT * from categorias order by id_categoria";
+      $sql = "SELECT * from categorias WHERE activo_categoria=1 order by id_categoria";
 	    $query = $mysqli->query($sql);
 	    while($resultado = $query->fetch_assoc()) {
         $categorias[] = $resultado;
@@ -18,7 +18,7 @@
   ?>    
 
   <?php
-    require "../mlibs/bodycat.php";
+    require "../mlibs/bodylcat.php";
   ?>
 
   <?php

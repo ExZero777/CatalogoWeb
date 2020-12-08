@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-<title>Listados Por SubCategorias</title>
+<title>Listados Por Marcas</title>
   <?php
     require "../mlibs/header.php"
   ?>
@@ -10,15 +10,15 @@
   <?php 
       require "../conexion.php";
  
-      $sql = "SELECT * FROM subcategorias WHERE (activo_subcategoria=1) AND (categoria_subcategoria=" . $_GET['id_categoria'].  ") ORDER BY id_subcategoria";
+      $sql = "SELECT * FROM marcas WHERE activo_marca=1 ORDER BY nombre_marca DESC";
 	    $query = $mysqli->query($sql);
 	    while($resultado = $query->fetch_assoc()) {
-        $subcategorias[] = $resultado;
+        $marcas[] = $resultado;
       }
   ?>    
 
   <?php
-    require "../mlibs/bodylscat.php";
+    require "../mlibs/bodylm.php";
   ?>
 
   <?php

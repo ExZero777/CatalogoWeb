@@ -8,13 +8,13 @@
         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action dropdown-toggle bg-dark text-white">Productos</a>
             <ul class="collapse list-unstyled" id="pageSubmenu">
                 <li>
-                  <a href="../marcas/marcas.php" class="list-group-item list-group-item-action bg-warning text-dark">Nuevo</a>
+                  <a href="../subcategorias/subcategorias.php" class="list-group-item list-group-item-action bg-warning text-dark">Nuevo</a>
                 </li>
                 <li>
-                  <a href="../productos/categorias.php" class="list-group-item list-group-item-action bg-warning text-dark">Categorias</a>
+                  <a href="../productos/index.php" class="list-group-item list-group-item-action bg-warning text-dark">Categorias</a>
                 </li>
                 <li>
-                  <a href="../productos/subcategorias.php" class="list-group-item list-group-item-action bg-warning text-dark">SubCategorias</a>
+                  <a href="../marcas/index.php" class="list-group-item list-group-item-action bg-warning text-dark">Marcas</a>
                 </li>
                 <li>
                   <a href="#" class="list-group-item list-group-item-action bg-warning text-dark">A-Z...Z-A</a>
@@ -40,19 +40,19 @@
     <div class="mt-4 align-self-center text-left">
   
       <div class="mt-4 text-dark">
-        <h2 class="mt-4">Listado De Marcas</h2>
+        <h2 class="mt-4">Listado De SubCategorias</h2>
       </div>  
 
       <?php 				
-      	$long = count($marcas);
+      	$long = count($subcategorias);
       	for($i=0; $i< $long; $i++){
       ?>
 	    <div class="list-group">
-        <a 	<?php echo "href=modifica.php?id_marca=".$marcas[$i]['id_marca'];?>
+        <a 	<?php echo "href=modifica.php?id_subcategoria=".$subcategorias[$i]['id_subcategoria'];?>
 			   	class="list-group-item bg-dark">
-			  	<h4 class="list-group-item-heading"> <?php echo $marcas[$i]['id_marca'] ."";?> </h4>
-          <p class="list-group-item-text"><?php 	echo "Nombre: " . $marcas[$i]['nombre_marca'] ." - Activo:"; 
-                                                  echo $marcas[$i]['activo_marca'] .""; 
+			  	<h4 class="list-group-item-heading"> <?php echo $subcategorias[$i]['id_subcategoria'] ."";?> </h4>
+          <p class="list-group-item-text"><?php 	echo "Nombre: " . $marcas[$i]['nombre_subcategoria'] ." - Activo:"; 
+                                                  echo $subcategorias[$i]['activo_subcategoria'] .""; 
                                                   ?>
           </p>		 
 			  </a>

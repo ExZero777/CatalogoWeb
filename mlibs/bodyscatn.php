@@ -54,7 +54,8 @@
               Faltó Ingresar El Nombre De La SubCategoria
             </div>
           </div>
-        
+          
+          
           <div class="col-md-12 mb-4">
             <label for="activo_categoria">Activa(Si/1 O No/0)</label>
             <select type="text" class="custom-select d-block w-100" name="activo_subcategoria" placeholder="" value="" required>

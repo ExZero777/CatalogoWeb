@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-<title>Listados De Marcas</title>
+<title>Listados De Productos</title>
   <?php
     require "../mlibs/header.php"
   ?>
@@ -12,15 +12,15 @@
 <?php 
     require "../conexion.php";
 
-    $sql = "SELECT * from marcas WHERE activo_marca=1 order by id_marca";
+    $sql = "SELECT * FROM productos WHERE subcategoria_producto=" . $_GET['id_subcategoria']. " ORDER BY destacado_producto DESC";
     $query = $mysqli->query($sql);
     while($resultado = $query->fetch_assoc()) {
-      $marcas[] = $resultado;
+      $productos[] = $resultado;
     }
 ?>    
 
 <?php
-  require "../mlibs/bodylm.php";
+  require "../mlibs/bodylp.php";
 ?>
 
 <?php

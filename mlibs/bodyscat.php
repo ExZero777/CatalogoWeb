@@ -48,7 +48,7 @@
       	for($i=0; $i< $long; $i++){
       ?>
 	    <div class="list-group">
-        <a 	<?php echo "href=../listados/subcategorias.php?id_subcategoria=".$subcategorias[$i]['id_subcategoria'];?>
+        <a 	<?php echo "href=../subcategorias/subcategorias.php?id_subcategoria=".$subcategorias[$i]['id_subcategoria'];?>
 			   	class="list-group-item bg-dark">
 			  	<h4 class="list-group-item-heading"> <?php echo $subcategorias[$i]['id_subcategoria'] ."";?> </h4>
           <p class="list-group-item-text"><?php 	echo "Nombre: " . $subcategorias[$i]['nombre_subcategoria'] .""; ?>

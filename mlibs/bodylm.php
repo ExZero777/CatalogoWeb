@@ -12,10 +12,10 @@
                   <a href="../listados/subcategorias.php" class="list-group-item list-group-item-action bg-warning text-dark">SubCategorias</a>
                 </li>
                 <li>
-                  <a href="../listados/marcas.php" class="list-group-item list-group-item-action bg-warning text-dark">Marcas</a>
+                  <a href="../mlibs/ordenmza.php" class="list-group-item list-group-item-action bg-warning text-dark">Z-A</a>
                 </li>
                 <li>
-                  <a href="#" class="list-group-item list-group-item-action bg-warning text-dark">A-Z...Z-A</a>
+                  <a href="../mlibs/ordenmaz.php" class="list-group-item list-group-item-action bg-warning text-dark">A-Z</a>
                 </li>
             </ul>         
         <a href="../comentarios/" class="list-group-item list-group-item-action bg-dark text-white">Comentarios</a>

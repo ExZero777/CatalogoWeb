@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-<title>Listados Por SubCategorias</title>
+<title>Listados Por Productos</title>
   <?php
     require "../mlibs/header.php"
   ?>
@@ -10,15 +10,15 @@
   <?php 
       require "../conexion.php";
  
-      $sql = "SELECT * FROM subcategorias WHERE (activo_subcategoria=1) AND (categoria_subcategoria=" . $_GET['id_categoria'].  ") ORDER BY id_subcategoria";
+      $sql = "SELECT * FROM productos WHERE activo_producto=1 ORDER BY nombre_producto DESC";
 	    $query = $mysqli->query($sql);
 	    while($resultado = $query->fetch_assoc()) {
-        $subcategorias[] = $resultado;
+        $productos[] = $resultado;
       }
   ?>    
 
   <?php
-    require "../mlibs/bodylscat.php";
+    require "../mlibs/bodylp.php";
   ?>
 
   <?php

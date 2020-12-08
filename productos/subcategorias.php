@@ -10,7 +10,7 @@
   <?php 
       require "../conexion.php";
 
-      $sql = "SELECT s.id_subcategoria, s.nombre_subcategoria FROM subcategorias AS s,categorias AS c WHERE c.id_categoria=s.categoria_subcategoria ORDER BY s.id_subcategoria";
+      $sql = "SELECT * FROM subcategorias ORDER BY id_subcategoria";
 	    $query = $mysqli->query($sql);
 	    while($resultado = $query->fetch_assoc()) {
         $subcategorias[] = $resultado;
