@@ -16,9 +16,6 @@
                 <li>
                   <a href="../productos/subcategorias.php" class="list-group-item list-group-item-action bg-warning text-dark">SubCategorias</a>
                 </li>
-                <li>
-                  <a href="#" class="list-group-item list-group-item-action bg-warning text-dark">A-Z...Z-A</a>
-                </li>
             </ul> 
         <a href="../usuarios/" class="list-group-item list-group-item-action bg-dark text-white">Usuarios</a>
         <a href="../contacto/" class="list-group-item list-group-item-action bg-dark text-white">Contactenos</a>

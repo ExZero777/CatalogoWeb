@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-<title>Listados De Usuarios</title>
+<title>Alta De Perfiles</title>
 <?php 
     require "../metodos.php";
     require "../mlibs/header.php"
@@ -13,13 +13,6 @@
 <?php 
    require "../conexion.php";
 
-  
-
-    $sql = "SELECT * from usuarios order by id_usuario";
-	$query = $mysqli->query($sql);
-	while($resultado = $query->fetch_assoc()) {
-        $usuarios[] = $resultado;
-    }
    
     $sql = "SELECT * from permisos order by id_permiso";
 	$query = $mysqli->query($sql);
@@ -31,7 +24,7 @@
 
 
 <?php
-    require "../mlibs/bodyu.php";
+    require "../mlibs/bodyper.php";
   ?>
 
   <?php

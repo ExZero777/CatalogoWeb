@@ -51,7 +51,7 @@
         <a 	<?php echo "href=modifica.php?id_subcategoria=".$subcategorias[$i]['id_subcategoria'];?>
 			   	class="list-group-item bg-dark">
 			  	<h4 class="list-group-item-heading"> <?php echo $subcategorias[$i]['id_subcategoria'] ."";?> </h4>
-          <p class="list-group-item-text"><?php 	echo "Nombre: " . $marcas[$i]['nombre_subcategoria'] ." - Activo:"; 
+          <p class="list-group-item-text"><?php 	echo "Nombre: " . $subcategorias[$i]['nombre_subcategoria'] ." - Activo:"; 
                                                   echo $subcategorias[$i]['activo_subcategoria'] .""; 
                                                   ?>
           </p>		 

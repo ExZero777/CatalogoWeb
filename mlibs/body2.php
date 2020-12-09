@@ -6,16 +6,13 @@
         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action dropdown-toggle bg-dark text-white">Listado De Productos</a>
             <ul class="collapse list-unstyled" id="pageSubmenu">
                 <li>
-                  <a href="../listados/categorias.php" class="list-group-item list-group-item-action bg-warning text-dark">Categorias</a>
+                  <a href="../listados2/categorias.php" class="list-group-item list-group-item-action bg-warning text-dark">Categorias</a>
                 </li>
                 <li>
-                  <a href="../listados/subcategorias.php" class="list-group-item list-group-item-action bg-warning text-dark">SubCategorias</a>
+                  <a href="../listados2/subcategorias.php" class="list-group-item list-group-item-action bg-warning text-dark">SubCategorias</a>
                 </li>
                 <li>
-                  <a href="../listados/marcas.php" class="list-group-item list-group-item-action bg-warning text-dark">Marcas</a>
-                </li>
-                <li>
-                  <a href="#" class="list-group-item list-group-item-action bg-warning text-dark">A-Z...Z-A</a>
+                  <a href="../listados2/marcas.php" class="list-group-item list-group-item-action bg-warning text-dark">Marcas</a>
                 </li>
             </ul>         
         <a href="../contacto/" class="list-group-item list-group-item-action bg-dark text-white">Contactenos</a>

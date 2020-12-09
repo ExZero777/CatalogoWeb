@@ -21,7 +21,7 @@
 ?>    
 
 <?php
-  require "../mlibs/bodyip.php";
+  require "../mlibs/bodyiper.php";
 ?>
 
 <?php

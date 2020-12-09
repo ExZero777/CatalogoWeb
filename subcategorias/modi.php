@@ -1,5 +1,5 @@
 <html>
-<title>Modificacion Usuarios</title>
+<title>Modificacion Subcategorias</title>
 <?php
   require "../mlibs/header.php";
 ?>  
@@ -9,7 +9,7 @@
 
 
 <?php
-    require "../mlibs/bodymmo.php";
+    require "../mlibs/bodysmo.php";
 ?>
 
 <?php

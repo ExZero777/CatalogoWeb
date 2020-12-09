@@ -6,22 +6,22 @@
     require "../mlibs/header.php"     
 ?>
 
-<body background="../img/usuarios.jpg" style="background-size:cover";>
+<body background="../img/categorias.jpg" style="background-size:cover";>
 
 
 <?php 
    
    require "../conexion.php";
-   $sql = "SELECT * from marcas where id_marca = " . $_GET['id_marca'];
+   $sql = "SELECT * from subcategorias where id_subcategoria = " . $_GET['id_subcategoria'];
    $query = $mysqli->query($sql);
    while($resultado = $query->fetch_assoc()) {
-         $marcas[] = $resultado;
+         $subcategorias[] = $resultado;
      }  
      
 	echo "<input type='hidden' name='id_marca' value=" .$_GET['id_marca'] .">"; 
 ?>  
 	  <?php
-    require "../mlibs/bodymm.php";
+    require "../mlibs/bodycm.php";
   ?>
 
   <?php

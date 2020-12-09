@@ -177,11 +177,11 @@
            <label for="subcategoria_producto">SubCategoria</label>
            <select class="custom-select d-block w-100" name="subcategoria_producto" required>
            <?php 
-				     $long = count($categorias);
+				     $long = count($subcategorias);
 				     for($i=0; $i< $long; $i++){
 				     echo "<option";
-             echo " value=" .$categorias[$i]['id_subcategoria'].">";				
-                 echo $categorias[$i]['nombre_subcategoria'];
+             echo " value=" .$subcategorias[$i]['id_subcategoria'].">";				
+                 echo $subcategorias[$i]['nombre_subcategoria'];
               
 				     echo "</option>";
              }

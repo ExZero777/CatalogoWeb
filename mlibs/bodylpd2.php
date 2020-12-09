@@ -37,6 +37,13 @@
       	$long = count($productos);
       	for($i=0; $i< $long; $i++){
       ?>
+  
+  
+	       	
+           
+        
+  
+</div>
 	    <div class="list-group">
         <a 	<?php echo "href=comentarios.php?id_producto=".$productos[$i]['id_producto'];?>
 			   	class="list-group-item bg-dark">
@@ -51,11 +58,13 @@
                             echo $productos[$i]['subcategoria_producto'] ." - Destacado: ";    
                             echo $productos[$i]['destacado_producto'] ."";
                                                   ?>
+          <?php echo '<p><img src="../img/'.$productos[$i]['foto_producto'].'"> </p>'?> 
           </p>		 
-			  </a>
+        </a>
       </div>
 	    <?php  } ?>
-    </div> 
+     
+
     <?php
       include "footer.php"
     ?>

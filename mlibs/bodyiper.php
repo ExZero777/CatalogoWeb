@@ -10,16 +10,13 @@
         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action dropdown-toggle bg-dark text-white">Usuarios</a>
             <ul class="collapse list-unstyled" id="pageSubmenu">
                 <li>
-                  <a href="../usuarios/usuarios.php" class="list-group-item list-group-item-action bg-warning text-dark">Nuevo</a>
+                  <a href="../perfiles/perfiles.php" class="list-group-item list-group-item-action bg-warning text-dark">Nuevo</a>
                 </li>
                 <li>
                   <a href="../perfiles/index.php" class="list-group-item list-group-item-action bg-warning text-dark">Perfiles</a>
                 </li>
                 <li>
                 <a href="../usuarios/index.php" class="list-group-item list-group-item-action bg-warning text-dark">Listado De Usuarios</a>
-                </li>
-                <li>
-                  <a href="#" class="list-group-item list-group-item-action bg-warning text-dark">A-Z...Z-A</a>
                 </li>
             </ul>         
         <a href="../contacto/" class="list-group-item list-group-item-action bg-dark text-white">Contactenos</a>

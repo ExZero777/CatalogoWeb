@@ -54,6 +54,7 @@
                             echo $productos[$i]['subcategoria_producto'] ." - Destacado: ";    
                             echo $productos[$i]['destacado_producto'] ."";
                                                   ?>
+                            <?php echo '<p><img src="../img/'.$productos[$i]['foto_producto'].'"> </p>'?> 
           </p>		 
 			  </a>
       </div>
