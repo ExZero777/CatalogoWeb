@@ -41,7 +41,7 @@
            
         <div class="col-md-12 mb-4">
           
-            <input type="hidden" class="form-control" name="id_subcategoria" placeholder="" value=<?php echo "'".$subcategorias[0]['id_marca']."'" ?> required>
+            <input type="hidden" class="form-control" name="id_subcategoria" placeholder="" value=<?php echo "'".$subcategorias[0]['id_subcategoria']."'" ?> required>
             <div class="invalid-feedback">
               Faltó Ingresar El ID De La Subcategoria
             </div>
@@ -76,7 +76,7 @@
 
           <div class="col-md-12 mb-4">
             <label for="activo_subcategoria">Activa(Si/1 O No/0)</label>
-            <select type="text" class="custom-select d-block w-100" name="activo_marca" placeholder="" value=<?php echo "'".$subcategorias[0]['activo_marca']."'" ?> required>
+            <select type="text" class="custom-select d-block w-100" name="activo_subcategoria" placeholder="" value=<?php echo "'".$subcategorias[0]['activo_subcategoria']."'" ?> required>
               <option value=0>Inactivo</option>
               <option value=1>Activo</option>
             </select>

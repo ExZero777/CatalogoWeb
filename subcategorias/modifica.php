@@ -17,11 +17,17 @@
    while($resultado = $query->fetch_assoc()) {
          $subcategorias[] = $resultado;
      }  
+
+     $sql = "SELECT * from categorias order by id_categoria";
+     $query = $mysqli->query($sql);
+     while($resultado = $query->fetch_assoc()) {
+       $categorias[] = $resultado;
+     }  
      
-	echo "<input type='hidden' name='id_marca' value=" .$_GET['id_marca'] .">"; 
+	echo "<input type='hidden' name='id_subcategoria' value=" .$_GET['id_subcategoria'] .">"; 
 ?>  
 	  <?php
-    require "../mlibs/bodycm.php";
+    require "../mlibs/bodysm.php";
   ?>
 
   <?php
