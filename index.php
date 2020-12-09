@@ -1,24 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Catalogo Web</title>
-  <link rel="shortcut icon" href="./img/jdlsa2.jpg" />
-  
-
-  <!-- Bootstrap/CSS Core-->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Estilos Customizados -->
-  <link href="css/simple-sidebar.css" rel="stylesheet">
-
-</head>
+<title>Catalogo Web</title>
+<?php
+    require "metodos.php"
+     
+?>
 
 <body background="./img/catalogo.jpg" style="background-size:100% 100%";>
 
@@ -47,56 +33,58 @@
 
 <?php 
    require "./conexion.php";
-   $c=0;
-   $sql = "SELECT * from productos order by id_producto";
+
+   $sql = "SELECT p.nombre_producto, p.foto_producto, p.destacado_producto FROM productos AS p ORDER BY RAND () LIMIT 6";
 	 $query = $mysqli->query($sql);
 	 while($resultado = $query->fetch_assoc()) {
          if($resultado['destacado_producto']==1){
           $productos[] = $resultado;
-          $c=$c+1;
          }
    }
-
-  $vals = range($c,0);
-  shuffle($vals);
-  foreach ($vals as $val) {
-  }
 ?>
+
+<?php 				
+      	$long = count($productos);
+      	for($i=0; $i< $long; $i++){ 
+      ?>
+
+        
       <div class="container-fluid text-dark">
-      <h3 class="mt-4">DESTACADOS!!!</h3>
+      <h2 class="mt-4">DESTACADOS!!!</h2>
         <div class="text-left"><h2>
-	       	<img border="0" src=<?php echo "'".$productos[$val]['foto_producto']."'" ?> width="250" height="250" title="Producto Destacado 1" />
-          <label for="Producto Destacado 1"><h6><?php echo "'".$productos[$val]['nombre_producto']."'" ?></h6></label>
+	       	<img border="0" src=<?php echo "'".$productos[$i]['foto_producto']."'" ?> width="250" height="250" title="Producto Destacado 1" />
+          <label for="Producto Destacado 1"><h6><?php echo "'".$productos[$i]['nombre_producto']."'" ?></h6></label>
         </h2></div>
         <div class="text-center"><h2>
-          <img border="0" src=<?php echo "'".$productos[$val]['foto_producto']."'" ?> width="250" height="250" title="Producto Destacado 2" />
-          <label for="Producto Destacado 2"><h6><?php echo "'".$productos[$val]['nombre_producto']."'" ?></h6></label>
+          <img border="0" src=<?php echo "'".$productos[$i]['foto_producto']."'" ?> width="250" height="250" title="Producto Destacado 2" />
+          <label for="Producto Destacado 2"><h6><?php echo "'".$productos[$i]['nombre_producto']."'" ?></h6></label>
         </h2></div>
         <div class="text-right"><h2>
-          <img border="0" src=<?php echo "'".$productos[$val]['foto_producto']."'" ?> width="250" height="250" title="Producto Destacado 3" />
-          <label for="Producto Destacado 3"><h6><?php echo "'".$productos[$val]['nombre_producto']."'" ?></h6></label>
+          <img border="0" src=<?php echo "'".$productos[$i]['foto_producto']."'" ?> width="250" height="250" title="Producto Destacado 3" />
+          <label for="Producto Destacado 3"><h6><?php echo "'".$productos[$i]['nombre_producto']."'" ?></h6></label>
         </h2></div>
         <div class="text-right"><h2>
-          <img border="0" src=<?php echo "'".$productos[$val]['foto_producto']."'" ?> width="250" height="250" title="Producto Destacado 4" />
-          <label for="Producto Destacado 4"><h6><?php echo "'".$productos[$val]['nombre_producto']."'" ?></h6></label>
+          <img border="0" src=<?php echo "'".$productos[$i]['foto_producto']."'" ?> width="250" height="250" title="Producto Destacado 4" />
+          <label for="Producto Destacado 4"><h6><?php echo "'".$productos[$i]['nombre_producto']."'" ?></h6></label>
         </h2></div>
         <div class="text-center"><h2>
-          <img border="0" src=<?php echo "'".$productos[$val]['foto_producto']."'" ?> width="250" height="250" title="Producto Destacado 5" />
-          <label for="Producto Destacado 5"><h6><?php echo "'".$productos[$val]['nombre_producto']."'" ?></h6></label>
+          <img border="0" src=<?php echo "'".$productos[$i]['foto_producto']."'" ?> width="250" height="250" title="Producto Destacado 5" />
+          <label for="Producto Destacado 5"><h6><?php echo "'".$productos[$i]['nombre_producto']."'" ?></h6></label>
         </h2></div>
         <div class="text-left"><h2>
-          <img border="0" src=<?php echo "'".$productos[$val]['foto_producto']."'" ?> width="250" height="250" title="Producto Destacado 6" />
-          <label for="Producto Destacado 6"><h6><?php echo "'".$productos[$val]['nombre_producto']."'" ?></h6></label>
+          <img border="0" src=<?php echo "'".$productos[$i]['foto_producto']."'" ?> width="250" height="250" title="Producto Destacado 6" />
+          <label for="Producto Destacado 6"><h6><?php echo "'".$productos[$i]['nombre_producto']."'" ?></h6></label>
         </h2></div>
+        <?php  } ?>
         <p>Configuración de datos para control e incorporación de información en la app móvil.</p>
       </div>
     </div>
-    
+      
   <!-- /#page-content-wrapper -->
 
   </div>
   <!-- /#wrapper -->
-
+  
   <!-- Bootstrap/JavaScript Cores-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -108,7 +96,7 @@
       $("#wrapper").toggleClass("toggled");
     });
   </script>
-  
+ 
    </div>
     <div class="col-sm-3">
       <h4 class="mb-1"> </h4>
