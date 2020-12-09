@@ -11,10 +11,10 @@
                   <a href="../productos/productos.php" class="list-group-item list-group-item-action bg-warning text-dark">Nuevo</a>
                 </li>
                 <li>
-                  <a href="../productos/categorias.php" class="list-group-item list-group-item-action bg-warning text-dark">Categorias</a>
+                  <a href="../categorias/index.php" class="list-group-item list-group-item-action bg-warning text-dark">Categorias</a>
                 </li>
                 <li>
-                  <a href="../productos/subcategorias.php" class="list-group-item list-group-item-action bg-warning text-dark">SubCategorias</a>
+                  <a href="../subcategorias/index.php" class="list-group-item list-group-item-action bg-warning text-dark">SubCategorias</a>
                 </li>
                 <li>
                   <a href="../marcas/index.php" class="list-group-item list-group-item-action bg-warning text-dark">Marcas</a>

@@ -30,7 +30,7 @@
             <h1>Contactanos!</h1>
             
         <div class="container">
-          <div class="d-flex justify-content-center text-white"> 
+          <div class="d-flex justify-content-center text-dark"> 
 
             <form action="../mlibs/mail.php" method="GET" name="miform" ALIGN=center>
                 <label for="nombre">Nombre</label>

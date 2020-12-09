@@ -8,16 +8,13 @@
         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action dropdown-toggle bg-dark text-white">Productos</a>
             <ul class="collapse list-unstyled" id="pageSubmenu">
                 <li>
-                  <a href="../subcategorias/subcategorias.php" class="list-group-item list-group-item-action bg-warning text-dark">Nuevo</a>
+                  <a href="../categorias/categorias.php" class="list-group-item list-group-item-action bg-warning text-dark">Nuevo</a>
                 </li>
                 <li>
-                  <a href="../productos/index.php" class="list-group-item list-group-item-action bg-warning text-dark">Categorias</a>
+                  <a href="../subcategorias/index.php" class="list-group-item list-group-item-action bg-warning text-dark">SubCategorias</a>
                 </li>
                 <li>
                   <a href="../marcas/index.php" class="list-group-item list-group-item-action bg-warning text-dark">Marcas</a>
-                </li>
-                <li>
-                  <a href="#" class="list-group-item list-group-item-action bg-warning text-dark">A-Z...Z-A</a>
                 </li>
             </ul> 
         <a href="../usuarios/" class="list-group-item list-group-item-action bg-dark text-white">Usuarios</a>
