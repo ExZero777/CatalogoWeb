@@ -1,7 +1,7 @@
 <div class="d-flex" id="wrapper">
   
   <div class="bg-black border-right" id="sidebar-wrapper">
-    <div class="sidebar-heading bg-black text-dark">Menú de Opciones</div>
+    <div class="sidebar-heading bg-black text-white">Menú de Opciones</div>
       <div class="list-group list-group-flush">
         <a href="../listados/" class="list-group-item list-group-item-action bg-dark text-white">Listado De Comentarios</a>
         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action dropdown-toggle bg-dark text-white">Comentarios</a>
