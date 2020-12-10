@@ -4,8 +4,8 @@
   <div class="bg-black border-right" id="sidebar-wrapper">
     <div class="sidebar-heading bg-black text-dark">Menú de Opciones</div>
       <div class="list-group list-group-flush">
-      <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action dropdown-toggle bg-dark text-white">Listado De Productos</a>
-            <ul class="collapse list-unstyled" id="pageSubmenu">
+      <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="true" class="list-group-item list-group-item-action dropdown-toggle bg-dark text-white">Listado De Productos</a>
+            <ul class="in list-unstyled" id="pageSubmenu">
                 <li>
                   <a href="javascript:history.go(-1)" class="list-group-item list-group-item-action bg-warning text-dark">Volver</a>
                 </li>

@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-<title>Listados De Categorias</title>
+<title>Listados Por Categorias</title>
   <?php
     require "../mlibs/header.php"
   ?>
@@ -9,16 +9,16 @@
 
   <?php 
       require "../conexion.php";
-
-      $sql = "SELECT * from categorias order by id_categoria";
+ 
+      $sql = "SELECT * FROM productos WHERE activo_producto=1 AND destacado_producto=1 ORDER BY destacado_producto DESC";
 	    $query = $mysqli->query($sql);
 	    while($resultado = $query->fetch_assoc()) {
-        $categorias[] = $resultado;
+        $productos[] = $resultado;
       }
   ?>    
 
   <?php
-    require "../mlibs/bodylcat2.php";
+    require "../mlibs/bodylp.php";
   ?>
 
   <?php

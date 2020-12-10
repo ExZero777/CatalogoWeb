@@ -2,11 +2,8 @@
   <div class="bg-black border-right" id="sidebar-wrapper">
     <div class="sidebar-heading bg-black text-dark">Menú de Opciones</div>
       <div class="list-group list-group-flush">
-        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action dropdown-toggle bg-dark text-white">Listado Por Categorias</a>
-            <ul class="collapse list-unstyled" id="pageSubmenu">
-                <li>
-                  <a href="../listados2/subcategorias.php" class="list-group-item list-group-item-action bg-warning text-dark">SubCategorias</a>
-                </li>
+        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="true" class="list-group-item list-group-item-action dropdown-toggle bg-dark text-white">Listado Por Categorias</a>
+            <ul class="in list-unstyled" id="pageSubmenu">
                 <li>
                   <a href="../listados2/marcas.php" class="list-group-item list-group-item-action bg-warning text-dark">Marcas</a>
                 </li>

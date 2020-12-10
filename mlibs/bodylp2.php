@@ -3,19 +3,22 @@
   <div class="bg-black border-right" id="sidebar-wrapper">
     <div class="sidebar-heading bg-black text-dark">Menú de Opciones</div>
       <div class="list-group list-group-flush">
-      <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action dropdown-toggle bg-dark text-white">Listado De Productos</a>
-            <ul class="collapse list-unstyled" id="pageSubmenu">
+      <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="true" class="list-group-item list-group-item-action dropdown-toggle bg-dark text-white">Listado De Productos</a>
+            <ul class="in list-unstyled" id="pageSubmenu">
                 <li>
                   <a href="../listados2/categorias.php" class="list-group-item list-group-item-action bg-warning text-dark">Categorias</a>
-                </li>
-                <li>
-                  <a href="../listados2/subcategorias.php" class="list-group-item list-group-item-action bg-warning text-dark">SubCategorias</a>
                 </li>
                 <li>
                   <a href="../mlibs/ordenpza2.php" class="list-group-item list-group-item-action bg-warning text-dark">Z-A</a>
                 </li>
                 <li>
                   <a href="../mlibs/ordenpaz2.php" class="list-group-item list-group-item-action bg-warning text-dark">A-Z</a>
+                </li>
+                <li>
+                  <a href="../mlibs/ordenpr2.php" class="list-group-item list-group-item-action bg-warning text-dark">Ranqueados</a>
+                </li>
+                <li>
+                  <a href="../mlibs/ordenpdes2.php" class="list-group-item list-group-item-action bg-warning text-dark">Destacados</a>
                 </li>
             </ul>         
         <a href="../contacto2/" class="list-group-item list-group-item-action bg-dark text-white">Contactenos</a>
