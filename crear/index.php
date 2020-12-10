@@ -15,6 +15,7 @@
 
 <?php 
     require "../metodos.php";
+    require "../mlibs/header.php";
 ?>
 
 <body background="../img/crear.jpg" style="background-size:cover";>
