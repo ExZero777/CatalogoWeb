@@ -58,28 +58,24 @@
    }
 ?>
 
-<?php 				
+<?php 		
+    $c=0;		
     $long = count($productos);
       	for($i=0; $i< $long; $i++){ 
 ?>
 
         
-    <div class="container-fluid text-dark">
+    <div class="container text-dark">
       <h2 class="mt-4">PRODUCTO DESTACADO!!!</h2>
-        <div class="text-left"><h2>
-          
-         <img  src= <?php echo $productos[$i]['foto_producto'];   ?> width="300" height="300" title="Producto Destacado 1" />
-
-          <label for="Producto Destacado 1"><h6><?php echo "'".$productos[$i]['nombre_producto']."'" ?></h6></label>
+      
+        <img src= <?php echo $productos[$i]['foto_producto']; ?> width="300" height="300"><h2>
+         <label for="Producto Destacado 1"><h6><?php echo "'".$productos[$i]['nombre_producto']."'" ?></h6></label>
         </h2>
-       </div>
-      </div>
+    </div>
       <?php  } ?> 
 
-      </div>
-  
-  
-  
+    </div>
+    
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 

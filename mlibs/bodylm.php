@@ -15,10 +15,7 @@
                   <a href="../mlibs/ordenmaz.php" class="list-group-item list-group-item-action bg-warning text-dark">A-Z</a>
                 </li>
             </ul>         
-        <a href="../comentarios/" class="list-group-item list-group-item-action bg-dark text-white">Comentarios</a>
-        <a href="../productos/" class="list-group-item list-group-item-action bg-dark text-white">Productos</a>
-        <a href="../usuarios/" class="list-group-item list-group-item-action bg-dark text-white">Usuarios</a>
-        <a href="../contacto/" class="list-group-item list-group-item-action bg-dark text-white">Contactenos</a>
+        <a href="../contacto2/" class="list-group-item list-group-item-action bg-dark text-white">Contactenos</a>
         
   
         <a href="../" class="list-group-item list-group-item-action bg-dark text-white">Salir</a>
