@@ -55,7 +55,7 @@
 
 <div class="container">
     <div class="d-flex justify-content-center text-dark">
-      <form ALIGN=center class="form-horizontal" action="../productos/modi.php" method="POST">
+      <form ALIGN=center class="form-horizontal" action="../productos/modi.php" method="POST" enctype="multipart/form-data">
         <div class="form-group">
 
            
@@ -113,8 +113,7 @@
 
           <div class="col-md-12 mb-4">
             <label for="foto_producto">Foto</label>
-            
-            <input type="file" class="form-control" id="image" name="foto_producto" placeholder="" value=<?php echo "'".$productos[0]['foto_producto']."'" ?> multiple>
+            <input type="file" name="foto_producto" id="foto_producto">
             <div class="invalid-feedback">
               Faltó Ingresar La Foto Del Producto
             </div>

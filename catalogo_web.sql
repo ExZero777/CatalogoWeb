@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-12-2020 a las 23:18:44
+-- Tiempo de generación: 10-12-2020 a las 05:32:22
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.6
 
@@ -39,7 +39,8 @@ CREATE TABLE `categorias` (
 
 INSERT INTO `categorias` (`id_categoria`, `nombre_categoria`, `activo_categoria`) VALUES
 (1, 'Alfajores', 1),
-(2, 'Muffins', 1);
+(2, 'Muffins', 1),
+(3, 'juaz', 0);
 
 -- --------------------------------------------------------
 
@@ -62,9 +63,10 @@ CREATE TABLE `comentarios` (
 
 INSERT INTO `comentarios` (`id_comentario`, `producto_comentario`, `fecha_comentario`, `comentario_comentario`, `ranqueo_comentario`, `activo_comentario`) VALUES
 (1, 1, '2020-12-02', 'el mejor alfajor', NULL, 1),
-(11, 4, '2020-12-08', 'grgwg', 1, 0),
+(11, 4, '2020-12-08', 'grgwg', 1, 1),
 (34, 4, '2020-12-08', 'afgva', 4, 1),
-(35, 4, '2020-12-08', 'juacitouu', 2, 1);
+(35, 4, '2020-12-08', 'juacitouu', 2, 1),
+(40, 1, '2020-12-08', 'esta bueno', 5, 0);
 
 -- --------------------------------------------------------
 
@@ -86,7 +88,8 @@ INSERT INTO `marcas` (`id_marca`, `nombre_marca`, `activo_marca`) VALUES
 (1, 'arcor', 1),
 (2, 'jojo', 1),
 (7, 'solo', 0),
-(13, 'Nestle', 1);
+(13, 'Nestle', 1),
+(14, 'adidas', 1);
 
 -- --------------------------------------------------------
 
@@ -105,7 +108,8 @@ CREATE TABLE `permisos` (
 
 INSERT INTO `permisos` (`id_permiso`, `nombre_permiso`) VALUES
 (1, 'Admin'),
-(2, 'Usuario');
+(2, 'Usuario'),
+(5, 'prueba');
 
 -- --------------------------------------------------------
 
@@ -119,7 +123,7 @@ CREATE TABLE `productos` (
   `descripcion_producto` varchar(100) DEFAULT NULL,
   `marca_producto` int(8) DEFAULT NULL,
   `modelo_producto` varchar(50) DEFAULT NULL,
-  `foto_producto` longblob DEFAULT NULL,
+  `foto_producto` varchar(100) DEFAULT NULL,
   `ranqueo_producto` int(1) DEFAULT NULL,
   `usuario_producto` int(8) DEFAULT NULL,
   `categoria_producto` int(1) DEFAULT NULL,
@@ -133,10 +137,14 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id_producto`, `nombre_producto`, `descripcion_producto`, `marca_producto`, `modelo_producto`, `foto_producto`, `ranqueo_producto`, `usuario_producto`, `categoria_producto`, `subcategoria_producto`, `destacado_producto`, `activo_producto`) VALUES
-(1, 'jorgitou', 'alto alfajor', 1, 'chocolate', 0x2e2e2f436174616c6f676f5765622f696d672f696e7465672e6a7067, 5, 23, 1, 3, 1, 1),
-(2, 'mach3', 'hojojo', 1, 'chocolate', 0x2e2e2f436174616c6f676f5765622f696d672f676d622e6a7067, 5, 23, 2, 5, 1, 0),
-(3, 'march1', 'jejej', 1, 'chocolate', 0x2e2e2f436174616c6f676f5765622f696d672f696e677265736f2e6a7067, 5, 23, 2, 4, 0, 0),
-(4, 'alfajor', 'riquisimo', 1, 'jorgelin', 0x2e2e2f436174616c6f676f5765622f696d672f677261626172752e6a7067, 5, 23, 1, 3, 1, 1);
+(1, 'jorgitou', 'alto alfajor', 1, 'chocolate', '../CatalogoWeb/img/marcas.jpg', 1, 1, 1, 3, 1, 1),
+(2, 'mach3', 'hojojo', 1, 'chocolate', '../CatalogoWeb/img/gmb.jpg', 5, 23, 2, 5, 1, 1),
+(3, 'march1', 'jejej', 1, 'chocolate', '../CatalogoWeb/img/ingreso.jpg', 5, 23, 2, 4, 1, 1),
+(4, 'alfajor', 'riquisimo', 1, 'jorgelin', '../CatalogoWeb/img/productos.jpg', 1, 1, 1, 3, 1, 1),
+(9, 'jaja', 'ajaja', 1, 'jorgito', '../CatalogoWeb/img/nuevou.jpg', 1, 1, 1, 3, 1, 1),
+(10, 'jajadf', 'ajajasdgg', 13, 'jorgito', '../CatalogoWeb/img/listados.jpg', 3, 23, 2, 5, 1, 1),
+(11, 'juazz', 'ajajasdgg', 1, 'jorgito', '../CatalogoWeb/img/erd.jpg', 1, 1, 1, 3, 1, 1),
+(37, 'jajadf', 'ajaja', 13, 'jorgito', '../img/subs/erd.jpg', 5, 24, 3, 5, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -189,8 +197,7 @@ INSERT INTO `usuarios` (`id_usuario`, `nickname_usuario`, `nombre_usuario`, `ape
 (23, 'Leon777', 'Leonardo', 'Mark', '123456789', 'de por ahi 5432', 'leon@hotmail.com', 'garfio1234', 1),
 (24, 'juan0132', 'denise', 'Mark', '54312367', 'juan de los palotes 5534 dpto 1', 'juaz@gmail.com', 'sasa', 2),
 (25, 'juan01', 'juan man', 'sarasa', '33123456', 'juan de los palotes 5534 dpto 1', 'jojo@hotmail.com', 'sasa', 2),
-(26, 'juan01', 'juan man', 'sarasa', '33123456', 'juan de los palotes 5534 dpto 1', 'jojo@hotmail.com', 'sasa', NULL),
-(27, 'juan01', 'juan man', 'sarasa', '33123456', 'juan de los palotes 5534 dpto 1', 'jojo@hotmail.com', 'sasa', 2);
+(28, 'juampa33', 'juaz', 'Mark', '54312367', 'del camino 5432', 'leo1n@hotmail.com', 'sasa', 2);
 
 --
 -- Índices para tablas volcadas
@@ -253,31 +260,31 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id_categoria` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_categoria` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `comentarios`
 --
 ALTER TABLE `comentarios`
-  MODIFY `id_comentario` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id_comentario` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT de la tabla `marcas`
 --
 ALTER TABLE `marcas`
-  MODIFY `id_marca` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_marca` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `permisos`
 --
 ALTER TABLE `permisos`
-  MODIFY `id_permiso` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_permiso` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_producto` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_producto` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT de la tabla `subcategorias`
@@ -289,7 +296,7 @@ ALTER TABLE `subcategorias`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id_usuario` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- Restricciones para tablas volcadas

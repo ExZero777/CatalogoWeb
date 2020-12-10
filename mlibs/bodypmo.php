@@ -3,7 +3,7 @@
   <div class="bg-black border-right" id="sidebar-wrapper" >
     <div class="sidebar-heading bg-black text-dark">Menú de Opciones</div>
       <div class="list-group list-group-flush">
-        <a href="../usuarios/" class="list-group-item list-group-item-action bg-dark text-white">Volver</a>  
+        <a href="../productos/" class="list-group-item list-group-item-action bg-dark text-white">Volver</a>  
       </div>
     </div>
     
@@ -23,6 +23,8 @@
 require "../conexion.php";
 require "../metodos.php";
 
+$ruta ="../img/subs/".$_FILES['foto_producto']['name'];
+ move_uploaded_file($_FILES["foto_producto"]["tmp_name"],$ruta);
 
 
 
@@ -30,7 +32,7 @@ $sql = "UPDATE productos SET nombre_producto='" . ($_POST['nombre_producto']) 		
   "descripcion_producto='" 		. $_POST['descripcion_producto']									."'," .			
   "marca_producto='" 		. $_POST['marca_producto']									."'," .			
   "modelo_producto='" 		. $_POST['modelo_producto']									."'," .			
-  "foto_producto='" 		. $_POST['foto_producto']									."'," .			
+  "foto_producto='" 		. $ruta									."'," .			
   "ranqueo_producto='" 		. $_POST['ranqueo_producto']									."'," .			
   "usuario_producto='" 		. $_POST['usuario_producto']									."'," .		
   "categoria_producto='" 		. $_POST['categoria_producto']									."'," .		
@@ -49,7 +51,7 @@ $sql = "UPDATE productos SET nombre_producto='" . ($_POST['nombre_producto']) 		
 
   
   
-  <p class="lead"><h4><strong>Modificación de Usuarios</strong></h4></p>
+  <p class="lead"><h4><strong>Modificación de Productos</strong></h4></p>
 
 
 

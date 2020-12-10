@@ -44,7 +44,7 @@
 
 <div class="container">
     <div class="d-flex justify-content-center text-dark">
-      <form ALIGN=center class="form-horizontal" action="../productos/grabar.php" method="POST">
+      <form ALIGN=center class="form-horizontal" action="../productos/grabar.php" method="POST"enctype="multipart/form-data">
         <div class="form-group">
 
 
@@ -67,12 +67,23 @@
       
          
           <div class="col-md-12 mb-4">
-            <label for="marca_producto">Marca</label>
-            <input type="text" class="form-control" name="marca_producto" placeholder="" value="" required>
+           <label for="marca_producto">Marca</label>
+           <select class="custom-select d-block w-100" name="marca_producto" required>
+           <?php 
+				     $long = count($marcas);
+				     for($i=0; $i< $long; $i++){
+				     echo "<option";
+             echo " value=" .$marcas[$i]['id_marca'].">";				
+                 echo $marcas[$i]['nombre_marca'];
+              
+				     echo "</option>";
+             }
+				   ?>
+            </select>
             <div class="invalid-feedback">
-              Faltó Ingresar La Marca Del Producto
+              Faltó Seleccionar Una Categoria Para El Producto
             </div>
-          </div>
+          </div>    
 
           <div class="col-md-12 mb-4">
             <label for="modelo_producto">Modelo</label>
@@ -84,12 +95,14 @@
           
           <div class="col-md-12 mb-4">
             <label for="foto_producto">Foto</label>
-            
-            <input type="file" class="form-control" id="image" name="foto_producto" placeholder="" value="" multiple>
+            <input type="file" name="foto_producto" id="foto_producto">
             <div class="invalid-feedback">
               Faltó Ingresar La Foto Del Producto
             </div>
           </div>
+
+
+
 
           <div class="col-md-12 mb-4">
             <label for="ranqueo_producto">Ranqueo(Del 1 Al 5)</label>
@@ -148,11 +161,11 @@
            <label for="subcategoria_producto">SubCategoria</label>
            <select class="custom-select d-block w-100" name="subcategoria_producto" required>
            <?php 
-				     $long = count($categorias);
+				     $long = count($subcategorias);
 				     for($i=0; $i< $long; $i++){
 				     echo "<option";
-             echo " value=" .$categorias[$i]['id_subcategoria'].">";				
-                 echo $categorias[$i]['nombre_subcategoria'];
+             echo " value=" .$subcategorias[$i]['id_subcategoria'].">";				
+                 echo $subcategorias[$i]['nombre_subcategoria'];
               
 				     echo "</option>";
              }
@@ -166,6 +179,17 @@
           <div class="col-md-12 mb-4">
             <label for="destacado_producto">Destacado(Si/1 O No/0)</label>
             <select type="text" class="custom-select d-block w-100" name="destacado_producto" placeholder="" value=<?php echo "'".$productos[0]['destacado_producto']."'" ?> required>
+              <option value=0>No</option>
+              <option value=1>Si</option>
+            </select>
+            <div class="invalid-feedback">
+              Faltó Ingresar Si El Producto Es Destacado O No
+            </div>
+          </div>
+
+          <div class="col-md-12 mb-4">
+            <label for="activo_producto">Activo(Si/1 O No/0)</label>
+            <select type="text" class="custom-select d-block w-100" name="activo_producto" placeholder="" value=<?php echo "'".$productos[0]['activo_producto']."'" ?> required>
               <option value=0>No</option>
               <option value=1>Si</option>
             </select>
