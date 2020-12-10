@@ -12,7 +12,7 @@
 <?php 
     require "../conexion.php";
 
-    $sql = "SELECT * FROM productos WHERE subcategoria_producto=" . $_GET['id_subcategoria']. " ORDER BY destacado_producto DESC";
+    $sql = "SELECT * FROM productos WHERE activo_producto=1 AND subcategoria_producto=" . $_GET['id_subcategoria']. " ORDER BY destacado_producto DESC";
     $query = $mysqli->query($sql);
     while($resultado = $query->fetch_assoc()) {
       $productos[] = $resultado;
