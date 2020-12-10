@@ -202,6 +202,16 @@
             </div>
           </div>
 
+          <div class="col-md-12 mb-4">
+            <label for="activo_producto">Activo(Si/1 O No/0)</label>
+            <select type="text" class="custom-select d-block w-100" name="activo_producto" placeholder="" value=<?php echo "'".$productos[0]['activo_producto']."'" ?> required>
+              <option value=0>No</option>
+              <option value=1>Si</option>
+            </select>
+            <div class="invalid-feedback">
+              Faltó Ingresar Si El Producto Es Destacado O No
+            </div>
+          </div>
           
     </div>
     <hr class="mb-4">

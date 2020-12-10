@@ -24,8 +24,8 @@ require "../conexion.php";
 require "../metodos.php";
 
 $ruta ="../img/subs/".$_FILES['foto_producto']['name'];
- move_uploaded_file($_FILES["foto_producto"]["tmp_name"],$ruta);
-
+move_uploaded_file($_FILES["foto_producto"]["tmp_name"],$ruta);
+$ruta = "../CatalogoWeb/img/subs/".$_FILES['foto_producto']['name'];
 
 
 $sql = "UPDATE productos SET nombre_producto='" . ($_POST['nombre_producto']) 				."'," .
@@ -37,7 +37,8 @@ $sql = "UPDATE productos SET nombre_producto='" . ($_POST['nombre_producto']) 		
   "usuario_producto='" 		. $_POST['usuario_producto']									."'," .		
   "categoria_producto='" 		. $_POST['categoria_producto']									."'," .		
   "subcategoria_producto='" 		. $_POST['subcategoria_producto']									."'," .		
-  "destacado_producto='" 	. $_POST['destacado_producto']								."'" .			
+  "destacado_producto='" 		. $_POST['destacado_producto']									."'," .		
+  "activo_producto='" 	. $_POST['activo_producto']								."'" .			
   " where id_producto =" . ($_POST['id_producto']) ;							
           
 

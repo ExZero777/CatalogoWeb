@@ -25,7 +25,7 @@
 
  $ruta ="../img/subs/".$_FILES['foto_producto']['name'];
  move_uploaded_file($_FILES["foto_producto"]["tmp_name"],$ruta);
-
+ $ruta = "../CatalogoWeb/img/subs/".$_FILES['foto_producto']['name'];
 
  $sql = "insert into productos(
   nombre_producto,descripcion_producto,marca_producto,modelo_producto,foto_producto,ranqueo_producto,usuario_producto,categoria_producto,subcategoria_producto,destacado_producto,activo_producto)
